@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<!-- <script type="text/javascript" src="validate.js"></script> -->
+<style>
+table{
+	background-color:rgba(204,204,204,0.5);
+}
+input,select{
+	border:none;
+	padding:5px;
+}
+.submit {
+	background-color: yellowgreen;
+	padding: 10px 25px;
+	font-size: 17px;
+}
+.reset {
+	background-color: coral;
+	padding: 10px 20px;
+	font-size: 17px;
+}
+</style>
+</head>
+
+<body>
+<form action="insert" method="post" name="StudentRegistration" onsubmit="return(validate());">
+
+<table cellpadding="5" width="30%" align="center"
+cellspacing="10">
+
+<tr>
+<td colspan=2>
+<center><h2>Student Registration Form</h2></center>
+</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td><input type=text name="textnames" id="textname" size="30"></td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td><input type="radio" name="gender" value="male" size="10">Male
+<input type="radio" name="gender" value="Female" size="10">Female</td>
+</tr>
+
+<tr>
+<td>Course</td>
+<td><select name="Course">
+<option value="-1" selected>select..</option>
+<option value="B.Tech">B.TECH</option>
+<option value="MCA">MCA</option>
+<option value="MBA">MBA</option>
+<option value="BCA">BCA</option>
+</select></td>
+</tr>
+
+<tr>
+<td>EmailId</td>
+<td><input type="text" name="emailid" id="emailid" size="30"></td>
+</tr>
+
+<tr>
+<td>DOB</td>
+<td><input type="text" name="dob" id="dob" size="30"></td>
+</tr>
+
+<tr>
+<td>MobileNo</td>
+<td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+</tr>
+<tr>
+<td><input type="reset" class="reset"></td>
+<td colspan="2"><input type="submit" class="submit" value="Submit Form" /></td>
+</tr>
+
+<tr>
+<td colspan=2>
+<center><a href="http://localhost:8088/select"><h3>user data</h3></a></center>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

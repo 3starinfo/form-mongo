@@ -1,0 +1,13 @@
+{
+  "name": "mongo-form",
+  "version": "0.0.1",
+  "description": "form demo",
+  "main": "form_demo_mongo_final.js",
+  "scripts": {
+    "test": "make test",
+    "start": "node form_demo_mongo_final.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
