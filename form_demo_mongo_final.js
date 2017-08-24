@@ -14,30 +14,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
 
-var paginator = pagination.create('search', {prelink:'/select', current: 1, rowsPerPage: 5, totalResult: 7});
-//console.log(paginator.render());
-
 app.get('/', function (req, res)
 {
     res.render('form.html');
 });
-
-//----create db-------
-/*MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  console.log("Database created!");
-  db.close();
-});*/
-
-//-----create table--------
-/*MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  db.createCollection("user", function(err, res) {
-    if (err) throw err;
-    console.log("Table created!");
-    db.close();
-  });
-});*/
 
 app.route('/insert').post(function(req,res){
 	MongoClient.connect(url, function(err, db) {
@@ -89,7 +69,7 @@ app.route('/select').get(function(req, res) {
            }
        }, function(err) {
 		   
-           res.send(str+paginator.render());
+           res.send(str);
            db.close();
           }
        );
