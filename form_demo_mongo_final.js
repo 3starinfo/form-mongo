@@ -148,6 +148,4 @@ app.get('/delete/:id',function(req, res) {
 	});
 });
 
-var server = app.listen(8088, function(){
-	console.log("server listening on 8088");
-});
+var server = app.listen(process.env.PORT || 8088);
