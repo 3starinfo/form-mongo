@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
     "express": "^4.15.2",
     "mongodb": "^2.2.31",
     "mongodb-autoincrement": "^1.0.1",
